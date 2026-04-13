@@ -222,3 +222,87 @@
     bindings = <&mkp MB1 &mkp MB1>;
     display-name = "Double Click";
   };
+
+  // ── Umlaute (macOS ABC Extended: Option+u dann Buchstabe) ──────────────
+
+  ae: ae {
+    compatible = "zmk,behavior-macro";
+    label = "AE";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT>,
+               <&macro_tap &kp U>,
+               <&macro_release &kp LALT>,
+               <&macro_tap &kp A>;
+    display-name = "ä";
+  };
+
+  oe: oe {
+    compatible = "zmk,behavior-macro";
+    label = "OE";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT>,
+               <&macro_tap &kp U>,
+               <&macro_release &kp LALT>,
+               <&macro_tap &kp O>;
+    display-name = "ö";
+  };
+
+  ue: ue {
+    compatible = "zmk,behavior-macro";
+    label = "UE";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT>,
+               <&macro_tap &kp U>,
+               <&macro_release &kp LALT>,
+               <&macro_tap &kp U>;
+    display-name = "ü";
+  };
+
+  ss: ss {
+    compatible = "zmk,behavior-macro";
+    label = "SS";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT>,
+               <&macro_tap &kp S>,
+               <&macro_release &kp LALT>;
+    display-name = "ß";
+  };
+
+  AE: AE_cap {
+    compatible = "zmk,behavior-macro";
+    label = "AE_CAP";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT>,
+               <&macro_tap &kp U>,
+               <&macro_release &kp LALT>,
+               <&macro_press &kp LSHFT>,
+               <&macro_tap &kp A>,
+               <&macro_release &kp LSHFT>;
+    display-name = "Ä";
+  };
+
+  OE: OE_cap {
+    compatible = "zmk,behavior-macro";
+    label = "OE_CAP";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT>,
+               <&macro_tap &kp U>,
+               <&macro_release &kp LALT>,
+               <&macro_press &kp LSHFT>,
+               <&macro_tap &kp O>,
+               <&macro_release &kp LSHFT>;
+    display-name = "Ö";
+  };
+
+  UE: UE_cap {
+    compatible = "zmk,behavior-macro";
+    label = "UE_CAP";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LALT>,
+               <&macro_tap &kp U>,
+               <&macro_release &kp LALT>,
+               <&macro_press &kp LSHFT>,
+               <&macro_tap &kp U>,
+               <&macro_release &kp LSHFT>;
+    display-name = "Ü";
+  };
